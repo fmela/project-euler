@@ -1,0 +1,13 @@
+term = 2;
+f1 = 1;
+f2 = 2;
+for (;;) {
+    if (length(f2) >= 1000)
+	break;
+    next = f1 + f2;
+    f1 = f2;
+    f2 = next;
+    term++;
+}
+print "f[", term, "]=", f2, "\n";
+quit
