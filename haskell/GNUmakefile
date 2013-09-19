@@ -10,7 +10,7 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 $(BUILD_DIR)/%: %.hs
-	$(HS) $(HSFLAGS) --make $< -odir $(BUILD_DIR) -outputdir $(BUILD_DIR)
+	$(HS) $(HSFLAGS) --make $< -outputdir $(BUILD_DIR) -o $@
 
 .PHONY: clean
 clean:
