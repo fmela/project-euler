@@ -9,9 +9,9 @@ int left_truncate(int x)
 {
     if (x <= 1)
         return 0;
-    const int num_digits = ceil(log(x) / log(10.));
-    const int leading_digit_value = (int) pow(10., num_digits - 1);
-    return x - (int)((x / leading_digit_value) * leading_digit_value);
+    const int num_digits = ceil(log10(x));
+    const int leading_digit_place_value = (int) pow(10., num_digits - 1);
+    return x % leading_digit_place_value;
 }
 
 // 3797, 379, 37, 9
