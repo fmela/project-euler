@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cassert>
 #include <cstring>
+#include <cstdlib>
 
 #import "is_prime.h"
 

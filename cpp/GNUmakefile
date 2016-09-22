@@ -15,10 +15,10 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 $(BUILD_DIR)/%: %.c $(HDR)
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) -lstdc++
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) -lm
 
 $(BUILD_DIR)/%: %.cc $(HDR)
-	$(CC) $(CXXFLAGS) -o $@ $< $(LDFLAGS) -lstdc++
+	$(CC) $(CXXFLAGS) -o $@ $< $(LDFLAGS) -lm -lstdc++
 
 .PHONY: clean
 clean:
