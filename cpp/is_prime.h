@@ -1,3 +1,7 @@
+#if !defined(__cplusplus)
+# include <stdbool.h>
+#endif
+
 bool is_prime(unsigned n) {
     if (n <= 0)
 	return false;
